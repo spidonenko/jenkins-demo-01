@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="example.TestClassOne" tests="5" skipped="0" failures="0" errors="0" timestamp="2024-12-23T12:26:30" hostname="Serhii.Pidonenko" time="0.012">
+  <properties/>
+  <testcase name="test_A1" classname="example.TestClassOne" time="0.001"/>
+  <testcase name="test_A2" classname="example.TestClassOne" time="0.001"/>
+  <testcase name="test_A3" classname="example.TestClassOne" time="0.001"/>
+  <testcase name="test_B1" classname="example.TestClassOne" time="0.001"/>
+  <testcase name="test_B2" classname="example.TestClassOne" time="0.002"/>
+  <system-out><![CDATA[==> example.TestClassOne -> setup
+Setup stuff here
+==> example.TestClassOne -> before_group_A
+Group-A starts here
+==> example.TestClassOne -> test_A1
+>Test-A1
+==> example.TestClassOne -> test_A2
+>Test-A2
+==> example.TestClassOne -> test_A3
+>Test-A3
+==> example.TestClassOne -> before_group_B
+Group-B starts here
+==> example.TestClassOne -> test_B1
+>Test-B1
+==> example.TestClassOne -> test_B2
+>Test-B2
+==> example.TestClassOne -> after_group_B
+Group-B ends here
+==> example.TestClassOne -> after_group_A
+Group-A ends here
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

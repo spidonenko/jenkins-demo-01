@@ -1,11 +1,23 @@
-/* Requires the Docker Pipeline plugin */
 pipeline {
-    agent { docker { image 'maven:3.9.9-eclipse-temurin-21-alpine' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                sh 'mvn --version'
+                sh 'echo "Run build"'
+                sh 'printenv > build/env-output.txt'
             }
+        }
+        stage('Test') {
+            steps {
+                sh 'echo "Run some tests - generating report"'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'build/**/*.txt', fingerprint: true
+            junit 'build/reports/**/*.xml'
         }
     }
 }
